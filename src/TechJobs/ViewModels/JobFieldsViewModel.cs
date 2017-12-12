@@ -3,36 +3,36 @@ using System.Collections.Generic;
 using TechJobs.Models;
 
 namespace TechJobs.ViewModels
-{
-    public class JobFieldsViewModel : BaseViewModel
-    {
-        // TODO #7.2 - Extract members common to SearchJobsViewModel
-        // to BaseViewModel
+	{
+		public class JobFieldsViewModel : BaseViewModel
+		{
+			// TODO #7.2 - Extract members common to SearchJobsViewModel
+			// to BaseViewModel
 
-        // The current column
-
-
-        // All columns, for display
-  
-
-		// All fields in the given column
-		public IEnumerable<JobField> Fields { get; set; }
-
-		// View title
+			// The current column
+			public JobFieldType Column { get; set; }
 
 
-		public JobFieldsViewModel()
-        {
-            // Populate the list of all columns
-
-            Columns = new List<JobFieldType>();
-
-            foreach (JobFieldType enumVal in Enum.GetValues(typeof(JobFieldType)))
-            {
-                Columns.Add(enumVal);
-            }
+			// All columns, for display
 
 
-        }
+			// All fields in the given column
+			public IEnumerable<JobField> Fields { get; set; }
+
+			// View title
+
+
+			/*public JobFieldsViewModel()
+			{
+				// Populate the list of all columns
+
+				Columns = new List<JobFieldType>();
+
+				foreach (JobFieldType enumVal in Enum.GetValues(typeof(JobFieldType)))
+				{
+					Columns.Add(enumVal);
+				}
+
+		}*/
     }
 }
